@@ -1,0 +1,46 @@
+{
+  "npmScope": "ezfinhub",
+  "affected": {
+    "defaultBase": "master"
+  },
+  "implicitDependencies": {
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    ".eslintrc.json": "*"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/nx-cloud",
+      "options": {
+        "cacheableOperations": ["build", "lint", "test", "e2e"],
+        "accessToken": "YzliNDI1MWItMDIyOC00YjdiLWEwNzItYzM3MTk0ZjM5Zjc0fHJlYWQtd3JpdGU=",
+        "canTrackAnalytics": false,
+        "showUsageWarnings": true
+      }
+    }
+  },
+  "targetDependencies": {
+    "build": [
+      {
+        "target": "build",
+        "projects": "dependencies"
+      }
+    ]
+  },
+  "projects": {
+    "investor": {
+      "tags": []
+    },
+    "investor-api": {
+      "tags": []
+    },
+    "sysadmin": {
+      "tags": []
+    },
+    "sysadmin-api": {
+      "tags": []
+    }
+  }
+}
