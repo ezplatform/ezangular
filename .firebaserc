@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "ezfinhub"
+    "dev": "ezfinhub-dev",
+    "prod": "ezfinhub"
   }
 }

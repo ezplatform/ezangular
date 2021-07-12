@@ -186,7 +186,7 @@
             "outputPath": "dist/apps/functions",
             "main": "apps/functions/src/main.ts",
             "tsConfig": "apps/functions/tsconfig.app.json",
-            "assets": ["apps/functions/src/assets", "apps/functions/package.json", "apps/functions/src/import-map-deployer-config.json"]
+            "assets": ["apps/functions/src/assets", "apps/functions/package.json", "apps/functions/configs/import-map-deployer.json"]
           },
           "configurations": {
             "production": {
@@ -240,16 +240,7 @@
             "polyfills": "apps/portal/src/polyfills.ts",
             "tsConfig": "apps/portal/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "apps/portal/src/favicon.ico",
-              "apps/portal/src/assets",
-              "apps/portal/src/manifest.webmanifest",
-              {
-                "glob": "**/*",
-                "input": "./node_modules/@ant-design/icons-angular/src/inline-svg/",
-                "output": "/assets/"
-              }
-            ],
+            "assets": ["apps/portal/src/favicon.ico", "apps/portal/src/assets", "apps/portal/src/manifest.webmanifest"],
             "styles": ["./node_modules/ng-zorro-antd/ng-zorro-antd.min.css", "apps/portal/src/styles.scss"],
             "scripts": [],
             "serviceWorker": true,

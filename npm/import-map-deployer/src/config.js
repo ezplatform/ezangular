@@ -4,7 +4,7 @@ const fs = require('fs'),
 
 let config = {};
 // Modified to fix for Firebase Functions
-const configJson = path.resolve('import-map-deployer-config.json');
+const configJson = path.resolve('configs/import-map-deployer.json');
 
 if (fs.existsSync(configJson)) {
   config = JSON.parse(fs.readFileSync(configJson));

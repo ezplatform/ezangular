@@ -1,0 +1,11 @@
+{
+  "manifestFormat": "importmap",
+  "urlSafeList": ["https://cdn.jsdelivr.net/npm/@ezfinhub/"],
+  "packagesViaTrailingSlashes": false,
+  "cacheControl": "public, max-age=300",
+  "username": "admin",
+  "password": "ezFinHub@1234567890",
+  "locations": {
+    "dev": "gs://ezfinhub.appspot.com/mf/import-map.json"
+  }
+}

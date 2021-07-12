@@ -7,7 +7,7 @@
   },
   "main": "./main.js",
   "dependencies": {
-    "@eztool/import-map-deployer": "4.4.8",
+    "@eztool/import-map-deployer": "4.4.10",
     "firebase-admin": "9.8.0",
     "firebase-functions": "3.14.1"
   }

@@ -1380,10 +1380,10 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@eztool/import-map-deployer@4.4.8":
-  version "4.4.8"
-  resolved "https://registry.yarnpkg.com/@eztool/import-map-deployer/-/import-map-deployer-4.4.8.tgz#9f3432b397afacfbed3981c441f0174670c5011e"
-  integrity sha512-ItYMty5fSYF2Y0ncPpk8d3fJ7PcZiYF1IFugFA+A62C9hC2nqqojc93Qklw6gz9eI2HVGVbE5EuMAkebBFaghg==
+"@eztool/import-map-deployer@4.4.10":
+  version "4.4.10"
+  resolved "https://registry.yarnpkg.com/@eztool/import-map-deployer/-/import-map-deployer-4.4.10.tgz#b5b20ec72c8b5563e4987dee153db76eb0d01b6d"
+  integrity sha512-GeYwMvBhlDufXTs/WhiZI9BdwzXYK5KTfvLQy/u8Z0xsbPSgTKI3CeC/CycmTwNE3Sx57m598jJ538kBeZQhuw==
   dependencies:
     "@azure/storage-blob" "^12.1.2"
     "@google-cloud/storage" "^5.7.4"

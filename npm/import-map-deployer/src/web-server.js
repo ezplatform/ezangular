@@ -1,5 +1,8 @@
 //Setup
 'use strict';
+
+const { getCacheControl } = require('./cache-control.js');
+
 require('dotenv').config();
 
 const express = require('express'),
@@ -58,6 +61,7 @@ function handleGetManifest(req, res) {
     .readManifest(env)
     .then(data => {
       var json = JSON.parse(data);
+      res.set('Cache-Control', getCacheControl());
       res.send(json);
     })
     .catch(ex => {
@@ -67,6 +71,7 @@ function handleGetManifest(req, res) {
 }
 
 function healthEndpoint(req, res) {
+  res.set('Cache-Control', getCacheControl());
   res.send({
     message: 'import-map-deployer service is running'
   });
@@ -235,7 +240,7 @@ app.patch('/mf/services', function (req, res) {
 app.delete('/mf/services/:serviceName', function (req, res) {
   let env = getEnv(req);
   modify
-    .modifyService(env, req.params.serviceName, null, true)
+    .modifyService(env, decodeURIComponent(req.params.serviceName), null, true)
     .then(data => {
       res.send(data);
     })
