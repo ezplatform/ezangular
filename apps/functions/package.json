@@ -1,0 +1,14 @@
+{
+  "name": "functions",
+  "version": "0.0.1",
+  "private": true,
+  "engines": {
+    "node": "14"
+  },
+  "main": "./main.js",
+  "dependencies": {
+    "@eztool/import-map-deployer": "4.4.8",
+    "firebase-admin": "9.8.0",
+    "firebase-functions": "3.14.1"
+  }
+}

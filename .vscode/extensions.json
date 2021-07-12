@@ -1,8 +1,25 @@
 {
   "recommendations": [
-    "nrwl.angular-console",
+    // Formatters
     "esbenp.prettier-vscode",
-    "firsttris.vscode-jest-runner",
-    "dbaeumer.vscode-eslint"
+    "HookyQR.beautify",
+    "mrmlnc.vscode-attrs-sorter",
+    "dbaeumer.vscode-eslint",
+    "emeraldwalk.runonsave",
+    // Theme extensions
+    "vscode-icons-team.vscode-icons",
+    "dracula-theme.theme-dracula",
+    // Intellisense extensions
+    "christian-kohler.npm-intellisense",
+    "christian-kohler.path-intellisense",
+    "mrmlnc.vscode-scss",
+    // Recommended extensions
+    "streetsidesoftware.code-spell-checker",
+    "alefragnani.bookmarks",
+    "eamodio.gitlens",
+    // Angular extensions
+    "angular.ng-template",
+    "nrwl.angular-console",
+    "firsttris.vscode-jest-runner"
   ]
 }

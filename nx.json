@@ -15,7 +15,7 @@
       "runner": "@nrwl/nx-cloud",
       "options": {
         "cacheableOperations": ["build", "lint", "test", "e2e"],
-        "accessToken": "YzliNDI1MWItMDIyOC00YjdiLWEwNzItYzM3MTk0ZjM5Zjc0fHJlYWQtd3JpdGU=",
+        "accessToken": "ZDgzYWJjMzEtODAzYi00MjY0LWIxZGMtOTc2MDMxNzI2MjU5fHJlYWQtd3JpdGU=",
         "canTrackAnalytics": false,
         "showUsageWarnings": true
       }
@@ -30,16 +30,25 @@
     ]
   },
   "projects": {
-    "investor": {
+    "angular-common": {
       "tags": []
     },
-    "investor-api": {
+    "angular-core": {
       "tags": []
     },
-    "sysadmin": {
+    "angular-platform-browser": {
       "tags": []
     },
-    "sysadmin-api": {
+    "functions": {
+      "tags": []
+    },
+    "portal": {
+      "tags": []
+    },
+    "sample": {
+      "tags": []
+    },
+    "single-spa-angular": {
       "tags": []
     }
   }

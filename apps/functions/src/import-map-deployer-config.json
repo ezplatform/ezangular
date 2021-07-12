@@ -1,0 +1,9 @@
+{
+  "manifestFormat": "importmap",
+  "username": "admin",
+  "password": "ezFinHub@1234567890",
+  "locations": {
+    "prod": "gs://ezfinhub-cdn/mf/prod/import-map.json",
+    "staging": "gs://ezfinhub-cdn/mf/staging/import-map.json"
+  }
+}

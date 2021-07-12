@@ -1,0 +1,507 @@
+{
+  "version": 1,
+  "projects": {
+    "angular-common": {
+      "projectType": "application",
+      "root": "bundles/angular-common",
+      "sourceRoot": "bundles/angular-common",
+      "architect": {
+        "build": {
+          "builder": "@angular-builders/custom-webpack:browser",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/bundles/angular-common",
+            "index": "bundles/index.html",
+            "main": "bundles/main.ts",
+            "tsConfig": "bundles/tsconfig.json",
+            "assets": ["bundles/angular-common/package.json"],
+            "customWebpackConfig": {
+              "path": "bundles/angular-common/webpack.config.js",
+              "libraryName": "angular-builder",
+              "libraryTarget": "umd"
+            }
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "outputHashing": "none"
+            }
+          },
+          "defaultConfiguration": "production"
+        }
+      }
+    },
+    "angular-core": {
+      "projectType": "application",
+      "root": "bundles/angular-core",
+      "sourceRoot": "bundles/angular-core",
+      "architect": {
+        "build": {
+          "builder": "@angular-builders/custom-webpack:browser",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/bundles/angular-core",
+            "index": "bundles/index.html",
+            "main": "bundles/main.ts",
+            "tsConfig": "bundles/tsconfig.json",
+            "assets": ["bundles/angular-core/package.json"],
+            "customWebpackConfig": {
+              "path": "bundles/angular-core/webpack.config.js",
+              "libraryName": "angular-builder",
+              "libraryTarget": "umd"
+            }
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "outputHashing": "none"
+            }
+          },
+          "defaultConfiguration": "production"
+        }
+      }
+    },
+    "angular-platform-browser": {
+      "projectType": "application",
+      "root": "bundles/angular-platform-browser",
+      "sourceRoot": "bundles/angular-platform-browser",
+      "architect": {
+        "build": {
+          "builder": "@angular-builders/custom-webpack:browser",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/bundles/angular-platform-browser",
+            "index": "bundles/index.html",
+            "main": "bundles/main.ts",
+            "tsConfig": "bundles/tsconfig.json",
+            "assets": ["bundles/angular-platform-browser/package.json"],
+            "customWebpackConfig": {
+              "path": "bundles/angular-platform-browser/webpack.config.js",
+              "libraryName": "angular-builder",
+              "libraryTarget": "umd"
+            }
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "outputHashing": "none"
+            }
+          },
+          "defaultConfiguration": "production"
+        }
+      }
+    },
+    "angular-router": {
+      "projectType": "application",
+      "root": "bundles/angular-router",
+      "sourceRoot": "bundles/angular-router",
+      "architect": {
+        "build": {
+          "builder": "@angular-builders/custom-webpack:browser",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/bundles/angular-router",
+            "index": "bundles/index.html",
+            "main": "bundles/main.ts",
+            "tsConfig": "bundles/tsconfig.json",
+            "assets": ["bundles/angular-router/package.json"],
+            "customWebpackConfig": {
+              "path": "bundles/angular-router/webpack.config.js",
+              "libraryName": "angular-builder",
+              "libraryTarget": "umd"
+            }
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "outputHashing": "none"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true,
+              "outputHashing": "none"
+            }
+          },
+          "defaultConfiguration": "production"
+        }
+      }
+    },
+    "functions": {
+      "root": "apps/functions",
+      "sourceRoot": "apps/functions",
+      "projectType": "application",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/node:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/apps/functions",
+            "main": "apps/functions/src/main.ts",
+            "tsConfig": "apps/functions/tsconfig.app.json",
+            "assets": ["apps/functions/src/assets", "apps/functions/package.json", "apps/functions/src/import-map-deployer-config.json"]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [
+                {
+                  "replace": "apps/functions/src/environments/environment.ts",
+                  "with": "apps/functions/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@nrwl/node:execute",
+          "options": {
+            "buildTarget": "functions:build"
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/functions/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/functions"],
+          "options": {
+            "jestConfig": "apps/functions/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "portal": {
+      "projectType": "application",
+      "root": "apps/portal",
+      "sourceRoot": "apps/portal/src",
+      "prefix": "ezfinhub",
+      "architect": {
+        "build": {
+          "builder": "@angular-builders/custom-webpack:browser",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/apps/portal",
+            "index": "apps/portal/src/index.html",
+            "main": "apps/portal/src/main.ts",
+            "polyfills": "apps/portal/src/polyfills.ts",
+            "tsConfig": "apps/portal/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "apps/portal/src/favicon.ico",
+              "apps/portal/src/assets",
+              "apps/portal/src/manifest.webmanifest",
+              {
+                "glob": "**/*",
+                "input": "./node_modules/@ant-design/icons-angular/src/inline-svg/",
+                "output": "/assets/"
+              }
+            ],
+            "styles": ["./node_modules/ng-zorro-antd/ng-zorro-antd.min.css", "apps/portal/src/styles.scss"],
+            "scripts": [],
+            "serviceWorker": true,
+            "ngswConfigPath": "apps/portal/ngsw-config.json",
+            "customWebpackConfig": {
+              "path": "apps/portal/webpack.config.js",
+              "libraryName": "portal",
+              "libraryTarget": "umd"
+            }
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "apps/portal/src/environments/environment.ts",
+                  "with": "apps/portal/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-builders/custom-webpack:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "portal:build:production"
+            },
+            "development": {
+              "browserTarget": "portal:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "portal:build"
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/portal/src/**/*.ts", "apps/portal/src/**/*.html"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/portal"],
+          "options": {
+            "jestConfig": "apps/portal/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "sample": {
+      "projectType": "application",
+      "root": "apps/sample",
+      "sourceRoot": "apps/sample/src",
+      "prefix": "ezfinhub",
+      "architect": {
+        "build": {
+          "builder": "@angular-builders/custom-webpack:browser",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/apps/sample",
+            "index": "apps/sample/src/index.html",
+            "main": "apps/sample/src/main.single-spa.ts",
+            "polyfills": "apps/sample/src/polyfills.ts",
+            "tsConfig": "apps/sample/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": ["apps/sample/src/favicon.ico", "apps/sample/src/assets"],
+            "styles": ["apps/sample/src/styles.scss"],
+            "scripts": [],
+            "customWebpackConfig": {
+              "path": "apps/sample/webpack.config.js",
+              "libraryName": "sample",
+              "libraryTarget": "umd"
+            },
+            "deployUrl": "http://localhost:4200/"
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "apps/sample/src/environments/environment.ts",
+                  "with": "apps/sample/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "none"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true,
+              "outputHashing": "none"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-builders/custom-webpack:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "sample:build:production"
+            },
+            "development": {
+              "browserTarget": "sample:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "sample:build"
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/sample/src/**/*.ts", "apps/sample/src/**/*.html"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/sample"],
+          "options": {
+            "jestConfig": "apps/sample/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "single-spa-angular": {
+      "projectType": "application",
+      "root": "bundles/single-spa-angular",
+      "sourceRoot": "bundles/single-spa-angular",
+      "architect": {
+        "build": {
+          "builder": "@angular-builders/custom-webpack:browser",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/bundles/single-spa-angular",
+            "index": "bundles/index.html",
+            "main": "bundles/main.ts",
+            "tsConfig": "bundles/tsconfig.json",
+            "assets": ["bundles/single-spa-angular/package.json"],
+            "customWebpackConfig": {
+              "path": "bundles/single-spa-angular/webpack.config.js",
+              "libraryName": "angular-builder",
+              "libraryTarget": "umd"
+            }
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "outputHashing": "none"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true,
+              "outputHashing": "none"
+            }
+          },
+          "defaultConfiguration": "production"
+        }
+      }
+    }
+  },
+  "cli": {
+    "analytics": false,
+    "defaultCollection": "@nrwl/angular"
+  },
+  "schematics": {
+    "@nrwl/angular": {
+      "application": {
+        "linter": "eslint"
+      },
+      "library": {
+        "linter": "eslint"
+      },
+      "storybook-configuration": {
+        "linter": "eslint"
+      }
+    },
+    "@nrwl/angular:application": {
+      "style": "scss",
+      "linter": "eslint",
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "style": "scss",
+      "linter": "eslint",
+      "unitTestRunner": "jest"
+    },
+    "@nrwl/angular:component": {
+      "style": "scss"
+    }
+  },
+  "defaultProject": "portal"
+}
