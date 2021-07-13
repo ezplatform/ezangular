@@ -3,9 +3,9 @@ const singleSpaAngularWebpack = require('single-spa-angular/lib/webpack').defaul
 module.exports = (config, options) => {
   const custom = singleSpaAngularWebpack(config, options);
   custom.entry = {
-    '@angular/router': '@angular/router'
+    '@angular/forms': '@angular/forms'
   };
-  custom.output.filename = 'router.umd.min.js';
-  custom.externals.push('tslib', 'rxjs', 'rxjs/operators', '@angular/common', '@angular/core', '@angular/platform-browser');
+  custom.output.filename = 'forms.umd.min.js';
+  custom.externals.push('tslib', 'rxjs', 'rxjs/operators', '@angular/core', '@angular/common', '@angular/platform-browser');
   return custom;
 };

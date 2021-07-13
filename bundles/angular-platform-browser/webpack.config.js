@@ -6,6 +6,6 @@ module.exports = (config, options) => {
     '@angular/platform-browser': '@angular/platform-browser'
   };
   custom.output.filename = 'platform-browser.umd.min.js';
-  custom.externals.push('@angular/common', '@angular/core');
+  custom.externals.push('tslib', '@angular/animations', '@angular/common', '@angular/core');
   return custom;
 };

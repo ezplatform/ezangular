@@ -5,12 +5,43 @@
     <title>ezFinhub Portal</title>
     <base href="/"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="theme-color" content="#1976d2">
+    <meta name="importmap-type" content="systemjs-importmap" />
     <link rel="icon" type="image/x-icon" href="favicon.ico"/>
     <link rel="manifest" href="manifest.webmanifest">
-    <meta name="theme-color" content="#1976d2">
+    <link href="https://cdn.jsdelivr.net/npm/ng-zorro-antd@12.0.1/ng-zorro-antd.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/zone.js@0.11.4/dist/zone.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/systemjs@6.10.2/dist/system.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/systemjs@6.10.2/dist/extras/amd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/systemjs@6.10.2/dist/extras/named-exports.min.js"></script>
+    <script type="systemjs-importmap"> {
+      "imports": {
+          "tslib": "https://cdn.jsdelivr.net/npm/tslib@2.3.0/tslib.min.js",
+          "rxjs": "https://cdn.jsdelivr.net/npm/@esm-bundle/rxjs@6.6.6/system/es2015/rxjs.min.js",
+          "rxjs/operators": "https://cdn.jsdelivr.net/npm/@esm-bundle/rxjs@6.6.6/system/es2015/rxjs-operators.min.js",
+          "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.3/lib/system/single-spa.min.js",
+          "single-spa-angular": "https://cdn.jsdelivr.net/npm/@ezfinhub-dev/single-spa-angular@0.0.2/single-spa-angular.umd.min.js",
+          "@angular/common": "https://cdn.jsdelivr.net/npm/@ezfinhub-dev/angular-common@0.0.2/common.umd.min.js",
+          "@angular/core": "https://cdn.jsdelivr.net/npm/@ezfinhub-dev/angular-core@0.0.2/core.umd.min.js",
+          "@angular/platform-browser": "https://cdn.jsdelivr.net/npm/@ezfinhub-dev/angular-platform-browser@0.0.2/platform-browser.umd.min.js",
+          "@angular/router": "https://cdn.jsdelivr.net/npm/@ezfinhub-dev/angular-router@0.0.2/router.umd.min.js"
+      }
+  }
+</script>
+    <script type="systemjs-importmap">
+      {
+        "imports": {
+          "@single-spa/welcome": "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js",
+          "@main/load": "//localhost:4200/main.js"
+        }
+      }
+    </script>
 </head>
   <body>
     <ezfinhub-root></ezfinhub-root>
+    <script>
+      System.import('@main/load');
+    </script>
     <noscript>Please enable JavaScript to continue using this application.</noscript>
 </body>
 </html>

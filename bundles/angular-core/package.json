@@ -1,6 +1,6 @@
 {
-  "name": "@ezfinhub/angular-core",
-  "version": "0.0.1",
+  "name": "@ezfinhub-dev/angular-core",
+  "version": "0.0.2",
   "description": "Single SPA UMD-bundle for @angular/core",
   "license": "MIT",
   "publishConfig": {

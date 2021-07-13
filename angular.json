@@ -1,6 +1,47 @@
 {
   "version": 1,
   "projects": {
+    "angular-animations": {
+      "projectType": "application",
+      "root": "bundles/angular-animations",
+      "sourceRoot": "bundles/angular-animations",
+      "architect": {
+        "build": {
+          "builder": "@angular-builders/custom-webpack:browser",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/bundles/angular-animations",
+            "index": "bundles/index.html",
+            "main": "bundles/main.ts",
+            "tsConfig": "bundles/tsconfig.json",
+            "assets": ["bundles/angular-animations/package.json"],
+            "customWebpackConfig": {
+              "path": "bundles/angular-animations/webpack.config.js",
+              "libraryName": "angular-builder",
+              "libraryTarget": "umd"
+            }
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "outputHashing": "none"
+            }
+          },
+          "defaultConfiguration": "production"
+        }
+      }
+    },
     "angular-common": {
       "projectType": "application",
       "root": "bundles/angular-common",
@@ -17,6 +58,47 @@
             "assets": ["bundles/angular-common/package.json"],
             "customWebpackConfig": {
               "path": "bundles/angular-common/webpack.config.js",
+              "libraryName": "angular-builder",
+              "libraryTarget": "umd"
+            }
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "outputHashing": "none"
+            }
+          },
+          "defaultConfiguration": "production"
+        }
+      }
+    },
+    "angular-compiler": {
+      "projectType": "application",
+      "root": "bundles/angular-compiler",
+      "sourceRoot": "bundles/angular-compiler",
+      "architect": {
+        "build": {
+          "builder": "@angular-builders/custom-webpack:browser",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/bundles/angular-compiler",
+            "index": "bundles/index.html",
+            "main": "bundles/main.ts",
+            "tsConfig": "bundles/tsconfig.json",
+            "assets": ["bundles/angular-compiler/package.json"],
+            "customWebpackConfig": {
+              "path": "bundles/angular-compiler/webpack.config.js",
               "libraryName": "angular-builder",
               "libraryTarget": "umd"
             }
@@ -83,6 +165,47 @@
         }
       }
     },
+    "angular-forms": {
+      "projectType": "application",
+      "root": "bundles/angular-forms",
+      "sourceRoot": "bundles/angular-forms",
+      "architect": {
+        "build": {
+          "builder": "@angular-builders/custom-webpack:browser",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/bundles/angular-forms",
+            "index": "bundles/index.html",
+            "main": "bundles/main.ts",
+            "tsConfig": "bundles/tsconfig.json",
+            "assets": ["bundles/angular-forms/package.json"],
+            "customWebpackConfig": {
+              "path": "bundles/angular-forms/webpack.config.js",
+              "libraryName": "angular-builder",
+              "libraryTarget": "umd"
+            }
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "outputHashing": "none"
+            }
+          },
+          "defaultConfiguration": "production"
+        }
+      }
+    },
     "angular-platform-browser": {
       "projectType": "application",
       "root": "bundles/angular-platform-browser",
@@ -99,6 +222,47 @@
             "assets": ["bundles/angular-platform-browser/package.json"],
             "customWebpackConfig": {
               "path": "bundles/angular-platform-browser/webpack.config.js",
+              "libraryName": "angular-builder",
+              "libraryTarget": "umd"
+            }
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "outputHashing": "none"
+            }
+          },
+          "defaultConfiguration": "production"
+        }
+      }
+    },
+    "angular-platform-browser-dynamic": {
+      "projectType": "application",
+      "root": "bundles/angular-platform-browser-dynamic",
+      "sourceRoot": "bundles/angular-platform-browser-dynamic",
+      "architect": {
+        "build": {
+          "builder": "@angular-builders/custom-webpack:browser",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/bundles/angular-platform-browser-dynamic",
+            "index": "bundles/index.html",
+            "main": "bundles/main.ts",
+            "tsConfig": "bundles/tsconfig.json",
+            "assets": ["bundles/angular-platform-browser-dynamic/package.json"],
+            "customWebpackConfig": {
+              "path": "bundles/angular-platform-browser-dynamic/webpack.config.js",
               "libraryName": "angular-builder",
               "libraryTarget": "umd"
             }
@@ -174,6 +338,47 @@
         }
       }
     },
+    "angular-service-worker": {
+      "projectType": "application",
+      "root": "bundles/angular-service-worker",
+      "sourceRoot": "bundles/angular-service-worker",
+      "architect": {
+        "build": {
+          "builder": "@angular-builders/custom-webpack:browser",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/bundles/angular-service-worker",
+            "index": "bundles/index.html",
+            "main": "bundles/main.ts",
+            "tsConfig": "bundles/tsconfig.json",
+            "assets": ["bundles/angular-service-worker/package.json"],
+            "customWebpackConfig": {
+              "path": "bundles/angular-service-worker/webpack.config.js",
+              "libraryName": "angular-builder",
+              "libraryTarget": "umd"
+            }
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "outputHashing": "none"
+            }
+          },
+          "defaultConfiguration": "production"
+        }
+      }
+    },
     "functions": {
       "root": "apps/functions",
       "sourceRoot": "apps/functions",
@@ -241,7 +446,7 @@
             "tsConfig": "apps/portal/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": ["apps/portal/src/favicon.ico", "apps/portal/src/assets", "apps/portal/src/manifest.webmanifest"],
-            "styles": ["./node_modules/ng-zorro-antd/ng-zorro-antd.min.css", "apps/portal/src/styles.scss"],
+            "styles": ["apps/portal/src/styles.scss"],
             "scripts": [],
             "serviceWorker": true,
             "ngswConfigPath": "apps/portal/ngsw-config.json",

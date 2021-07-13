@@ -1,7 +1,7 @@
 {
-  "name": "@ezfinhub-dev/angular-common",
+  "name": "@ezfinhub-dev/angular-compiler",
   "version": "0.0.2",
-  "description": "Single SPA UMD-bundle for @angular/common",
+  "description": "Single SPA UMD-bundle for @angular/compiler",
   "license": "MIT",
   "publishConfig": {
     "registry": "https://registry.npmjs.org"

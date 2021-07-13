@@ -6,6 +6,6 @@ module.exports = (config, options) => {
     '@angular/core': '@angular/core'
   };
   custom.output.filename = 'core.umd.min.js';
-  custom.externals.push('rxjs', 'rxjs/operators');
+  custom.externals.push('tslib', 'rxjs', 'rxjs/operators', 'zone.js');
   return custom;
 };

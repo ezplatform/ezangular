@@ -6,6 +6,6 @@ module.exports = (config, options) => {
     'single-spa-angular': 'single-spa-angular'
   };
   custom.output.filename = 'single-spa-angular.umd.min.js';
-  custom.externals.push('tslib', '@angular/common', '@angular/core');
+  custom.externals.push('tslib', '@angular/common', '@angular/core', 'single-spa');
   return custom;
 };
