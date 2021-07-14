@@ -1,6 +1,6 @@
 {
   "name": "@ezfinhub-dev/single-spa-angular",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Single SPA UMD-bundle for single-spa-angular",
   "license": "MIT",
   "publishConfig": {

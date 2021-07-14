@@ -14,17 +14,24 @@
     <script src="https://cdn.jsdelivr.net/npm/systemjs@6.10.2/dist/system.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/systemjs@6.10.2/dist/extras/amd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/systemjs@6.10.2/dist/extras/named-exports.min.js"></script>
+    <script type="systemjs-importmap" src="/mf/import-map.json"></script>
     <script type="systemjs-importmap"> {
       "imports": {
           "tslib": "https://cdn.jsdelivr.net/npm/tslib@2.3.0/tslib.min.js",
           "rxjs": "https://cdn.jsdelivr.net/npm/@esm-bundle/rxjs@6.6.6/system/es2015/rxjs.min.js",
           "rxjs/operators": "https://cdn.jsdelivr.net/npm/@esm-bundle/rxjs@6.6.6/system/es2015/rxjs-operators.min.js",
           "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.3/lib/system/single-spa.min.js",
-          "single-spa-angular": "https://cdn.jsdelivr.net/npm/@ezfinhub-dev/single-spa-angular@0.0.2/single-spa-angular.umd.min.js",
-          "@angular/common": "https://cdn.jsdelivr.net/npm/@ezfinhub-dev/angular-common@0.0.2/common.umd.min.js",
-          "@angular/core": "https://cdn.jsdelivr.net/npm/@ezfinhub-dev/angular-core@0.0.2/core.umd.min.js",
-          "@angular/platform-browser": "https://cdn.jsdelivr.net/npm/@ezfinhub-dev/angular-platform-browser@0.0.2/platform-browser.umd.min.js",
-          "@angular/router": "https://cdn.jsdelivr.net/npm/@ezfinhub-dev/angular-router@0.0.2/router.umd.min.js"
+          "single-spa-angular": "https://cdn.jsdelivr.net/npm/@ezfinhub-dev/single-spa-angular/single-spa-angular.umd.min.js",
+          "@angular/animations": "https://cdn.jsdelivr.net/npm/@ezfinhub-dev/angular-animations/animations.umd.min.js",
+          "@angular/common": "https://cdn.jsdelivr.net/npm/@ezfinhub-dev/angular-common/common.umd.min.js",
+          "@angular/common/http": "//localhost:4200/assets/common-http.umd.min.js",
+          "@angular/compiler": "https://cdn.jsdelivr.net/npm/@ezfinhub-dev/angular-compiler/compiler.umd.min.js",
+          "@angular/core": "https://cdn.jsdelivr.net/npm/@ezfinhub-dev/angular-core/core.umd.min.js",
+          "@angular/forms": "https://cdn.jsdelivr.net/npm/@ezfinhub-dev/angular-forms/forms.umd.min.js",
+          "@angular/platform-browser": "https://cdn.jsdelivr.net/npm/@ezfinhub-dev/angular-platform-browser/platform-browser.umd.min.js",
+          "@angular/platform-browser/animations": "https://cdn.jsdelivr.net/npm/@ezfinhub-dev/angular-platform-browser-animations/platform-browser-animations.umd.min.js",
+          "@angular/router": "https://cdn.jsdelivr.net/npm/@ezfinhub-dev/angular-router/router.umd.min.js",
+          "@angular/service-worker": "https://cdn.jsdelivr.net/npm/@ezfinhub-dev/angular-service-worker/service-worker.umd.min.js"
       }
   }
 </script>
