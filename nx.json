@@ -30,15 +30,6 @@
     ]
   },
   "projects": {
-    "angular-common": {
-      "tags": []
-    },
-    "angular-core": {
-      "tags": []
-    },
-    "angular-platform-browser": {
-      "tags": []
-    },
     "functions": {
       "tags": []
     },
@@ -46,9 +37,6 @@
       "tags": []
     },
     "sample": {
-      "tags": []
-    },
-    "single-spa-angular": {
       "tags": []
     }
   }

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ezFinHub Portal</title>
+  <base href="/"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="theme-color" content="#1976d2">
+  <meta name="importmap-type" content="systemjs-importmap" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+  <link rel="manifest" href="manifest.webmanifest">
+  <!--
+    Remove this if you only support browsers that support async/await.
+    This is needed by babel to share largeish helper code for compiling async/await in older
+    browsers. More information at https://github.com/single-spa/create-single-spa/issues/112
+  -->
+  <script src="https://cdn.jsdelivr.net/npm/regenerator-runtime@0.13.7/runtime.min.js"></script>
+
+  <% if (isDevMode) { %>
+  <link href="https://cdn.jsdelivr.net/npm/ng-zorro-antd@12.0.1/ng-zorro-antd.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/zone.js@0.11.4/dist/zone.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/systemjs@6.10.2/dist/system.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/systemjs@6.10.2/dist/extras/amd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/systemjs@6.10.2/dist/extras/named-exports.js"></script>
+  <script type="systemjs-importmap" src="https://cdn.jsdelivr.net/npm/@ezfinhub-dev/import-map/import-map.json"></script>
+  <script type="systemjs-importmap"> {
+    "imports": {
+        "tslib": "https://cdn.jsdelivr.net/npm/tslib@2.3.0/tslib.js",
+        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.3/lib/system/single-spa.dev.js"
+      }
+    }
+  </script>
+  <% } else { %>
+  <link href="https://cdn.jsdelivr.net/npm/ng-zorro-antd@12.0.1/ng-zorro-antd.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/zone.js@0.11.4/dist/zone.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/systemjs@6.10.2/dist/system.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/systemjs@6.10.2/dist/extras/amd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/systemjs@6.10.2/dist/extras/named-exports.min.js"></script>
+  <script type="systemjs-importmap" src="https://cdn.jsdelivr.net/npm/@ezfinhub-dev/import-map/import-map.json"></script>
+  <script type="systemjs-importmap"> {
+    "imports": {
+        "tslib": "https://cdn.jsdelivr.net/npm/tslib@2.3.0/tslib.min.js",
+        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.3/lib/system/single-spa.min.js"
+      }
+    }
+  </script>
+  <% } %>
+  <script type="systemjs-importmap">
+    {
+      "imports": {
+        "@single-spa/welcome": "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js",
+        "@ezfinhub/portal": "/portal.umd.js"
+      }
+    }
+  </script>
+</head>
+<body>
+  <angular-root></angular-root>
+  <noscript>
+    Please enable JavaScript to continue using this application.
+  </noscript>
+  <script>
+    System.import('@ezfinhub/portal');
+  </script>
+  <% if (isDevMode) { %>
+  <import-map-overrides-full show-when-local-storage="devtools" dev-libs></import-map-overrides-full>
+  <% } %>
+</body>
+</html>

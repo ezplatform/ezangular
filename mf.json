@@ -1,0 +1,791 @@
+{
+  "version": "1.0.0",
+  "bundles": {
+    "tslib": {
+      "ignoredBundling": true,
+      "version": "2.3.0"
+    },
+    "zone.js": {
+      "ignoredBundling": true,
+      "version": "0.11.4"
+    },
+    "single-spa": {
+      "ignoredBundling": true,
+      "version": "5.9.3"
+    },
+    "rxjs": {
+      "packageJson": "node_modules/rxjs/package.json",
+      "version": "6.6.6",
+      "normalizedName": "rxjs",
+      "output": "rxjs.6.6.6.umd.js"
+    },
+    "rxjs/operators": {
+      "packageJson": "node_modules/rxjs/operators/package.json",
+      "version": "6.6.6",
+      "normalizedName": "rxjs-operators",
+      "output": "rxjs-operators.6.6.6.umd.js"
+    },
+    "@angular/animations/browser": {
+      "packageJson": "node_modules/@angular/animations/browser/package.json",
+      "version": "12.1.1",
+      "normalizedName": "angular-animations-browser",
+      "output": "angular-animations-browser.12.1.1.umd.js"
+    },
+    "@angular/animations": {
+      "packageJson": "node_modules/@angular/animations/package.json",
+      "version": "12.1.1",
+      "normalizedName": "angular-animations",
+      "output": "angular-animations.12.1.1.umd.js"
+    },
+    "@angular/cdk/a11y": {
+      "packageJson": "node_modules/@angular/cdk/a11y/package.json",
+      "version": "12.1.1",
+      "normalizedName": "angular-cdk-a11y",
+      "output": "angular-cdk-a11y.12.1.1.umd.js"
+    },
+    "@angular/cdk/accordion": {
+      "packageJson": "node_modules/@angular/cdk/accordion/package.json",
+      "version": "12.1.1",
+      "normalizedName": "angular-cdk-accordion",
+      "output": "angular-cdk-accordion.12.1.1.umd.js"
+    },
+    "@angular/cdk/bidi": {
+      "packageJson": "node_modules/@angular/cdk/bidi/package.json",
+      "version": "12.1.1",
+      "normalizedName": "angular-cdk-bidi",
+      "output": "angular-cdk-bidi.12.1.1.umd.js"
+    },
+    "@angular/cdk/clipboard": {
+      "packageJson": "node_modules/@angular/cdk/clipboard/package.json",
+      "version": "12.1.1",
+      "normalizedName": "angular-cdk-clipboard",
+      "output": "angular-cdk-clipboard.12.1.1.umd.js"
+    },
+    "@angular/cdk/coercion": {
+      "packageJson": "node_modules/@angular/cdk/coercion/package.json",
+      "version": "12.1.1",
+      "normalizedName": "angular-cdk-coercion",
+      "output": "angular-cdk-coercion.12.1.1.umd.js"
+    },
+    "@angular/cdk/collections": {
+      "packageJson": "node_modules/@angular/cdk/collections/package.json",
+      "version": "12.1.1",
+      "normalizedName": "angular-cdk-collections",
+      "output": "angular-cdk-collections.12.1.1.umd.js"
+    },
+    "@angular/cdk/drag-drop": {
+      "packageJson": "node_modules/@angular/cdk/drag-drop/package.json",
+      "version": "12.1.1",
+      "normalizedName": "angular-cdk-drag-drop",
+      "output": "angular-cdk-drag-drop.12.1.1.umd.js"
+    },
+    "@angular/cdk/keycodes": {
+      "packageJson": "node_modules/@angular/cdk/keycodes/package.json",
+      "version": "12.1.1",
+      "normalizedName": "angular-cdk-keycodes",
+      "output": "angular-cdk-keycodes.12.1.1.umd.js"
+    },
+    "@angular/cdk/layout": {
+      "packageJson": "node_modules/@angular/cdk/layout/package.json",
+      "version": "12.1.1",
+      "normalizedName": "angular-cdk-layout",
+      "output": "angular-cdk-layout.12.1.1.umd.js"
+    },
+    "@angular/cdk/observers": {
+      "packageJson": "node_modules/@angular/cdk/observers/package.json",
+      "version": "12.1.1",
+      "normalizedName": "angular-cdk-observers",
+      "output": "angular-cdk-observers.12.1.1.umd.js"
+    },
+    "@angular/cdk/overlay": {
+      "packageJson": "node_modules/@angular/cdk/overlay/package.json",
+      "version": "12.1.1",
+      "normalizedName": "angular-cdk-overlay",
+      "output": "angular-cdk-overlay.12.1.1.umd.js"
+    },
+    "@angular/cdk": {
+      "packageJson": "node_modules/@angular/cdk/package.json",
+      "version": "12.1.1",
+      "normalizedName": "angular-cdk",
+      "output": "angular-cdk.12.1.1.umd.js"
+    },
+    "@angular/cdk/platform": {
+      "packageJson": "node_modules/@angular/cdk/platform/package.json",
+      "version": "12.1.1",
+      "normalizedName": "angular-cdk-platform",
+      "output": "angular-cdk-platform.12.1.1.umd.js"
+    },
+    "@angular/cdk/portal": {
+      "packageJson": "node_modules/@angular/cdk/portal/package.json",
+      "version": "12.1.1",
+      "normalizedName": "angular-cdk-portal",
+      "output": "angular-cdk-portal.12.1.1.umd.js"
+    },
+    "@angular/cdk/scrolling": {
+      "packageJson": "node_modules/@angular/cdk/scrolling/package.json",
+      "version": "12.1.1",
+      "normalizedName": "angular-cdk-scrolling",
+      "output": "angular-cdk-scrolling.12.1.1.umd.js"
+    },
+    "@angular/cdk/stepper": {
+      "packageJson": "node_modules/@angular/cdk/stepper/package.json",
+      "version": "12.1.1",
+      "normalizedName": "angular-cdk-stepper",
+      "output": "angular-cdk-stepper.12.1.1.umd.js"
+    },
+    "@angular/cdk/table": {
+      "packageJson": "node_modules/@angular/cdk/table/package.json",
+      "version": "12.1.1",
+      "normalizedName": "angular-cdk-table",
+      "output": "angular-cdk-table.12.1.1.umd.js"
+    },
+    "@angular/cdk/text-field": {
+      "packageJson": "node_modules/@angular/cdk/text-field/package.json",
+      "version": "12.1.1",
+      "normalizedName": "angular-cdk-text-field",
+      "output": "angular-cdk-text-field.12.1.1.umd.js"
+    },
+    "@angular/cdk/tree": {
+      "packageJson": "node_modules/@angular/cdk/tree/package.json",
+      "version": "12.1.1",
+      "normalizedName": "angular-cdk-tree",
+      "output": "angular-cdk-tree.12.1.1.umd.js"
+    },
+    "@angular/common/http": {
+      "packageJson": "node_modules/@angular/common/http/package.json",
+      "version": "12.1.1",
+      "normalizedName": "angular-common-http",
+      "output": "angular-common-http.12.1.1.umd.js"
+    },
+    "@angular/common": {
+      "packageJson": "node_modules/@angular/common/package.json",
+      "version": "12.1.1",
+      "normalizedName": "angular-common",
+      "output": "angular-common.12.1.1.umd.js"
+    },
+    "@angular/compiler": {
+      "packageJson": "node_modules/@angular/compiler/package.json",
+      "version": "12.1.1",
+      "normalizedName": "angular-compiler",
+      "output": "angular-compiler.12.1.1.umd.js"
+    },
+    "@angular/core": {
+      "packageJson": "node_modules/@angular/core/package.json",
+      "version": "12.1.1",
+      "normalizedName": "angular-core",
+      "output": "angular-core.12.1.1.umd.js"
+    },
+    "@angular/forms": {
+      "packageJson": "node_modules/@angular/forms/package.json",
+      "version": "12.1.1",
+      "normalizedName": "angular-forms",
+      "output": "angular-forms.12.1.1.umd.js"
+    },
+    "@angular/platform-browser/animations": {
+      "packageJson": "node_modules/@angular/platform-browser/animations/package.json",
+      "version": "12.1.1",
+      "normalizedName": "angular-platform-browser-animations",
+      "output": "angular-platform-browser-animations.12.1.1.umd.js"
+    },
+    "@angular/platform-browser": {
+      "packageJson": "node_modules/@angular/platform-browser/package.json",
+      "version": "12.1.1",
+      "normalizedName": "angular-platform-browser",
+      "output": "angular-platform-browser.12.1.1.umd.js"
+    },
+    "@angular/platform-browser-dynamic": {
+      "packageJson": "node_modules/@angular/platform-browser-dynamic/package.json",
+      "version": "12.1.1",
+      "normalizedName": "angular-platform-browser-dynamic",
+      "output": "angular-platform-browser-dynamic.12.1.1.umd.js"
+    },
+    "@angular/router": {
+      "packageJson": "node_modules/@angular/router/package.json",
+      "version": "12.1.1",
+      "normalizedName": "angular-router",
+      "output": "angular-router.12.1.1.umd.js"
+    },
+    "@angular/service-worker/config": {
+      "packageJson": "node_modules/@angular/service-worker/config/package.json",
+      "version": "12.1.1",
+      "normalizedName": "angular-service-worker-config",
+      "output": "angular-service-worker-config.12.1.1.umd.js"
+    },
+    "@angular/service-worker": {
+      "packageJson": "node_modules/@angular/service-worker/package.json",
+      "version": "12.1.1",
+      "normalizedName": "angular-service-worker",
+      "output": "angular-service-worker.12.1.1.umd.js"
+    },
+    "ng-zorro-antd/affix": {
+      "packageJson": "node_modules/ng-zorro-antd/affix/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-affix",
+      "output": "ng-zorro-antd-affix.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/alert": {
+      "packageJson": "node_modules/ng-zorro-antd/alert/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-alert",
+      "output": "ng-zorro-antd-alert.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/anchor": {
+      "packageJson": "node_modules/ng-zorro-antd/anchor/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-anchor",
+      "output": "ng-zorro-antd-anchor.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/auto-complete": {
+      "packageJson": "node_modules/ng-zorro-antd/auto-complete/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-auto-complete",
+      "output": "ng-zorro-antd-auto-complete.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/avatar": {
+      "packageJson": "node_modules/ng-zorro-antd/avatar/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-avatar",
+      "output": "ng-zorro-antd-avatar.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/back-top": {
+      "packageJson": "node_modules/ng-zorro-antd/back-top/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-back-top",
+      "output": "ng-zorro-antd-back-top.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/badge": {
+      "packageJson": "node_modules/ng-zorro-antd/badge/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-badge",
+      "output": "ng-zorro-antd-badge.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/breadcrumb": {
+      "packageJson": "node_modules/ng-zorro-antd/breadcrumb/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-breadcrumb",
+      "output": "ng-zorro-antd-breadcrumb.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/button": {
+      "packageJson": "node_modules/ng-zorro-antd/button/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-button",
+      "output": "ng-zorro-antd-button.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/calendar": {
+      "packageJson": "node_modules/ng-zorro-antd/calendar/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-calendar",
+      "output": "ng-zorro-antd-calendar.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/card": {
+      "packageJson": "node_modules/ng-zorro-antd/card/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-card",
+      "output": "ng-zorro-antd-card.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/carousel": {
+      "packageJson": "node_modules/ng-zorro-antd/carousel/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-carousel",
+      "output": "ng-zorro-antd-carousel.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/cascader": {
+      "packageJson": "node_modules/ng-zorro-antd/cascader/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-cascader",
+      "output": "ng-zorro-antd-cascader.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/cdk/overflow": {
+      "packageJson": "node_modules/ng-zorro-antd/cdk/overflow/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-cdk-overflow",
+      "output": "ng-zorro-antd-cdk-overflow.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/cdk/resize-observer": {
+      "packageJson": "node_modules/ng-zorro-antd/cdk/resize-observer/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-cdk-resize-observer",
+      "output": "ng-zorro-antd-cdk-resize-observer.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/checkbox": {
+      "packageJson": "node_modules/ng-zorro-antd/checkbox/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-checkbox",
+      "output": "ng-zorro-antd-checkbox.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/code-editor": {
+      "packageJson": "node_modules/ng-zorro-antd/code-editor/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-code-editor",
+      "output": "ng-zorro-antd-code-editor.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/collapse": {
+      "packageJson": "node_modules/ng-zorro-antd/collapse/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-collapse",
+      "output": "ng-zorro-antd-collapse.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/comment": {
+      "packageJson": "node_modules/ng-zorro-antd/comment/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-comment",
+      "output": "ng-zorro-antd-comment.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/core/animation": {
+      "packageJson": "node_modules/ng-zorro-antd/core/animation/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-core-animation",
+      "output": "ng-zorro-antd-core-animation.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/core/color": {
+      "packageJson": "node_modules/ng-zorro-antd/core/color/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-core-color",
+      "output": "ng-zorro-antd-core-color.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/core/config": {
+      "packageJson": "node_modules/ng-zorro-antd/core/config/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-core-config",
+      "output": "ng-zorro-antd-core-config.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/core/element-patch": {
+      "packageJson": "node_modules/ng-zorro-antd/core/element-patch/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-core-element-patch",
+      "output": "ng-zorro-antd-core-element-patch.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/core/environments": {
+      "packageJson": "node_modules/ng-zorro-antd/core/environments/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-core-environments",
+      "output": "ng-zorro-antd-core-environments.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/core/highlight": {
+      "packageJson": "node_modules/ng-zorro-antd/core/highlight/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-core-highlight",
+      "output": "ng-zorro-antd-core-highlight.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/core/logger": {
+      "packageJson": "node_modules/ng-zorro-antd/core/logger/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-core-logger",
+      "output": "ng-zorro-antd-core-logger.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/core/no-animation": {
+      "packageJson": "node_modules/ng-zorro-antd/core/no-animation/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-core-no-animation",
+      "output": "ng-zorro-antd-core-no-animation.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/core/outlet": {
+      "packageJson": "node_modules/ng-zorro-antd/core/outlet/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-core-outlet",
+      "output": "ng-zorro-antd-core-outlet.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/core/overlay": {
+      "packageJson": "node_modules/ng-zorro-antd/core/overlay/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-core-overlay",
+      "output": "ng-zorro-antd-core-overlay.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/core/pipe": {
+      "packageJson": "node_modules/ng-zorro-antd/core/pipe/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-core-pipe",
+      "output": "ng-zorro-antd-core-pipe.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/core/polyfill": {
+      "packageJson": "node_modules/ng-zorro-antd/core/polyfill/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-core-polyfill",
+      "output": "ng-zorro-antd-core-polyfill.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/core/services": {
+      "packageJson": "node_modules/ng-zorro-antd/core/services/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-core-services",
+      "output": "ng-zorro-antd-core-services.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/core/time": {
+      "packageJson": "node_modules/ng-zorro-antd/core/time/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-core-time",
+      "output": "ng-zorro-antd-core-time.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/core/trans-button": {
+      "packageJson": "node_modules/ng-zorro-antd/core/trans-button/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-core-trans-button",
+      "output": "ng-zorro-antd-core-trans-button.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/core/transition-patch": {
+      "packageJson": "node_modules/ng-zorro-antd/core/transition-patch/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-core-transition-patch",
+      "output": "ng-zorro-antd-core-transition-patch.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/core/tree": {
+      "packageJson": "node_modules/ng-zorro-antd/core/tree/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-core-tree",
+      "output": "ng-zorro-antd-core-tree.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/core/util": {
+      "packageJson": "node_modules/ng-zorro-antd/core/util/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-core-util",
+      "output": "ng-zorro-antd-core-util.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/core/wave": {
+      "packageJson": "node_modules/ng-zorro-antd/core/wave/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-core-wave",
+      "output": "ng-zorro-antd-core-wave.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/date-picker": {
+      "packageJson": "node_modules/ng-zorro-antd/date-picker/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-date-picker",
+      "output": "ng-zorro-antd-date-picker.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/descriptions": {
+      "packageJson": "node_modules/ng-zorro-antd/descriptions/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-descriptions",
+      "output": "ng-zorro-antd-descriptions.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/divider": {
+      "packageJson": "node_modules/ng-zorro-antd/divider/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-divider",
+      "output": "ng-zorro-antd-divider.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/drawer": {
+      "packageJson": "node_modules/ng-zorro-antd/drawer/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-drawer",
+      "output": "ng-zorro-antd-drawer.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/dropdown": {
+      "packageJson": "node_modules/ng-zorro-antd/dropdown/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-dropdown",
+      "output": "ng-zorro-antd-dropdown.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/empty": {
+      "packageJson": "node_modules/ng-zorro-antd/empty/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-empty",
+      "output": "ng-zorro-antd-empty.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/experimental/image": {
+      "packageJson": "node_modules/ng-zorro-antd/experimental/image/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-experimental-image",
+      "output": "ng-zorro-antd-experimental-image.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/form": {
+      "packageJson": "node_modules/ng-zorro-antd/form/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-form",
+      "output": "ng-zorro-antd-form.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/graph": {
+      "packageJson": "node_modules/ng-zorro-antd/graph/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-graph",
+      "output": "ng-zorro-antd-graph.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/grid": {
+      "packageJson": "node_modules/ng-zorro-antd/grid/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-grid",
+      "output": "ng-zorro-antd-grid.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/i18n": {
+      "packageJson": "node_modules/ng-zorro-antd/i18n/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-i18n",
+      "output": "ng-zorro-antd-i18n.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/icon": {
+      "packageJson": "node_modules/ng-zorro-antd/icon/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-icon",
+      "output": "ng-zorro-antd-icon.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/image": {
+      "packageJson": "node_modules/ng-zorro-antd/image/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-image",
+      "output": "ng-zorro-antd-image.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/input-number": {
+      "packageJson": "node_modules/ng-zorro-antd/input-number/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-input-number",
+      "output": "ng-zorro-antd-input-number.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/input": {
+      "packageJson": "node_modules/ng-zorro-antd/input/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-input",
+      "output": "ng-zorro-antd-input.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/layout": {
+      "packageJson": "node_modules/ng-zorro-antd/layout/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-layout",
+      "output": "ng-zorro-antd-layout.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/list": {
+      "packageJson": "node_modules/ng-zorro-antd/list/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-list",
+      "output": "ng-zorro-antd-list.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/mention": {
+      "packageJson": "node_modules/ng-zorro-antd/mention/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-mention",
+      "output": "ng-zorro-antd-mention.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/menu": {
+      "packageJson": "node_modules/ng-zorro-antd/menu/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-menu",
+      "output": "ng-zorro-antd-menu.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/message": {
+      "packageJson": "node_modules/ng-zorro-antd/message/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-message",
+      "output": "ng-zorro-antd-message.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/modal": {
+      "packageJson": "node_modules/ng-zorro-antd/modal/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-modal",
+      "output": "ng-zorro-antd-modal.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/notification": {
+      "packageJson": "node_modules/ng-zorro-antd/notification/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-notification",
+      "output": "ng-zorro-antd-notification.12.0.1.umd.js"
+    },
+    "ng-zorro-antd": {
+      "packageJson": "node_modules/ng-zorro-antd/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd",
+      "output": "ng-zorro-antd.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/page-header": {
+      "packageJson": "node_modules/ng-zorro-antd/page-header/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-page-header",
+      "output": "ng-zorro-antd-page-header.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/pagination": {
+      "packageJson": "node_modules/ng-zorro-antd/pagination/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-pagination",
+      "output": "ng-zorro-antd-pagination.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/pipes": {
+      "packageJson": "node_modules/ng-zorro-antd/pipes/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-pipes",
+      "output": "ng-zorro-antd-pipes.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/popconfirm": {
+      "packageJson": "node_modules/ng-zorro-antd/popconfirm/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-popconfirm",
+      "output": "ng-zorro-antd-popconfirm.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/popover": {
+      "packageJson": "node_modules/ng-zorro-antd/popover/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-popover",
+      "output": "ng-zorro-antd-popover.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/progress": {
+      "packageJson": "node_modules/ng-zorro-antd/progress/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-progress",
+      "output": "ng-zorro-antd-progress.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/radio": {
+      "packageJson": "node_modules/ng-zorro-antd/radio/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-radio",
+      "output": "ng-zorro-antd-radio.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/rate": {
+      "packageJson": "node_modules/ng-zorro-antd/rate/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-rate",
+      "output": "ng-zorro-antd-rate.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/resizable": {
+      "packageJson": "node_modules/ng-zorro-antd/resizable/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-resizable",
+      "output": "ng-zorro-antd-resizable.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/result": {
+      "packageJson": "node_modules/ng-zorro-antd/result/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-result",
+      "output": "ng-zorro-antd-result.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/select": {
+      "packageJson": "node_modules/ng-zorro-antd/select/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-select",
+      "output": "ng-zorro-antd-select.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/skeleton": {
+      "packageJson": "node_modules/ng-zorro-antd/skeleton/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-skeleton",
+      "output": "ng-zorro-antd-skeleton.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/slider": {
+      "packageJson": "node_modules/ng-zorro-antd/slider/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-slider",
+      "output": "ng-zorro-antd-slider.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/space": {
+      "packageJson": "node_modules/ng-zorro-antd/space/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-space",
+      "output": "ng-zorro-antd-space.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/spin": {
+      "packageJson": "node_modules/ng-zorro-antd/spin/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-spin",
+      "output": "ng-zorro-antd-spin.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/statistic": {
+      "packageJson": "node_modules/ng-zorro-antd/statistic/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-statistic",
+      "output": "ng-zorro-antd-statistic.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/steps": {
+      "packageJson": "node_modules/ng-zorro-antd/steps/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-steps",
+      "output": "ng-zorro-antd-steps.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/switch": {
+      "packageJson": "node_modules/ng-zorro-antd/switch/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-switch",
+      "output": "ng-zorro-antd-switch.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/table": {
+      "packageJson": "node_modules/ng-zorro-antd/table/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-table",
+      "output": "ng-zorro-antd-table.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/tabs": {
+      "packageJson": "node_modules/ng-zorro-antd/tabs/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-tabs",
+      "output": "ng-zorro-antd-tabs.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/tag": {
+      "packageJson": "node_modules/ng-zorro-antd/tag/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-tag",
+      "output": "ng-zorro-antd-tag.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/time-picker": {
+      "packageJson": "node_modules/ng-zorro-antd/time-picker/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-time-picker",
+      "output": "ng-zorro-antd-time-picker.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/timeline": {
+      "packageJson": "node_modules/ng-zorro-antd/timeline/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-timeline",
+      "output": "ng-zorro-antd-timeline.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/tooltip": {
+      "packageJson": "node_modules/ng-zorro-antd/tooltip/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-tooltip",
+      "output": "ng-zorro-antd-tooltip.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/transfer": {
+      "packageJson": "node_modules/ng-zorro-antd/transfer/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-transfer",
+      "output": "ng-zorro-antd-transfer.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/tree-select": {
+      "packageJson": "node_modules/ng-zorro-antd/tree-select/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-tree-select",
+      "output": "ng-zorro-antd-tree-select.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/tree-view": {
+      "packageJson": "node_modules/ng-zorro-antd/tree-view/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-tree-view",
+      "output": "ng-zorro-antd-tree-view.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/tree": {
+      "packageJson": "node_modules/ng-zorro-antd/tree/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-tree",
+      "output": "ng-zorro-antd-tree.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/typography": {
+      "packageJson": "node_modules/ng-zorro-antd/typography/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-typography",
+      "output": "ng-zorro-antd-typography.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/upload": {
+      "packageJson": "node_modules/ng-zorro-antd/upload/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-upload",
+      "output": "ng-zorro-antd-upload.12.0.1.umd.js"
+    },
+    "ng-zorro-antd/version": {
+      "packageJson": "node_modules/ng-zorro-antd/version/package.json",
+      "version": "12.0.1",
+      "normalizedName": "ng-zorro-antd-version",
+      "output": "ng-zorro-antd-version.12.0.1.umd.js"
+    },
+    "single-spa-angular/elements": {
+      "packageJson": "node_modules/single-spa-angular/elements/package.json",
+      "version": "5.0.1",
+      "normalizedName": "single-spa-angular-elements",
+      "output": "single-spa-angular-elements.5.0.1.umd.js"
+    },
+    "single-spa-angular": {
+      "packageJson": "node_modules/single-spa-angular/package.json",
+      "version": "5.0.1",
+      "normalizedName": "single-spa-angular",
+      "output": "single-spa-angular.5.0.1.umd.js"
+    },
+    "single-spa-angular/parcel": {
+      "packageJson": "node_modules/single-spa-angular/parcel/package.json",
+      "version": "5.0.1",
+      "normalizedName": "single-spa-angular-parcel",
+      "output": "single-spa-angular-parcel.5.0.1.umd.js"
+    }
+  }
+}

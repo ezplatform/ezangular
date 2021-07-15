@@ -1,10 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'ezfinhub-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'angular-root',
+  template: 'Angular App'
 })
-export class AppComponent {
-  isCollapsed = false;
-}
+export class AppComponent {}
