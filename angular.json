@@ -145,31 +145,25 @@
         }
       }
     },
-    "sample": {
+    "styling": {
       "projectType": "application",
-      "root": "apps/sample",
-      "sourceRoot": "apps/sample/src",
+      "root": "apps/styling",
+      "sourceRoot": "apps/styling/src",
       "prefix": "ezfinhub",
       "architect": {
         "build": {
-          "builder": "@angular-builders/custom-webpack:browser",
+          "builder": "@angular-devkit/build-angular:browser",
           "outputs": ["{options.outputPath}"],
           "options": {
-            "outputPath": "dist/apps/sample",
-            "index": "apps/sample/src/index.html",
-            "main": "apps/sample/src/main.single-spa.ts",
-            "polyfills": "apps/sample/src/polyfills.ts",
-            "tsConfig": "apps/sample/tsconfig.app.json",
-            "inlineStyleLanguage": "scss",
-            "assets": ["apps/sample/src/favicon.ico", "apps/sample/src/assets"],
-            "styles": ["apps/sample/src/styles.scss"],
-            "scripts": [],
-            "customWebpackConfig": {
-              "path": "apps/sample/webpack.config.js",
-              "libraryName": "sample",
-              "libraryTarget": "umd"
-            },
-            "deployUrl": "http://localhost:4200/"
+            "outputPath": "dist/apps/styling",
+            "index": "apps/styling/src/index.html",
+            "main": "apps/styling/src/main.ts",
+            "polyfills": "apps/styling/src/polyfills.ts",
+            "tsConfig": "apps/styling/tsconfig.app.json",
+            "inlineStyleLanguage": "less",
+            "assets": ["apps/styling/src/favicon.ico", "apps/styling/src/assets"],
+            "styles": ["apps/styling/src/styles.less"],
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -187,11 +181,11 @@
               ],
               "fileReplacements": [
                 {
-                  "replace": "apps/sample/src/environments/environment.ts",
-                  "with": "apps/sample/src/environments/environment.prod.ts"
+                  "replace": "apps/styling/src/environments/environment.ts",
+                  "with": "apps/styling/src/environments/environment.prod.ts"
                 }
               ],
-              "outputHashing": "none"
+              "outputHashing": "all"
             },
             "development": {
               "buildOptimizer": false,
@@ -199,20 +193,19 @@
               "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
-              "namedChunks": true,
-              "outputHashing": "none"
+              "namedChunks": true
             }
           },
           "defaultConfiguration": "production"
         },
         "serve": {
-          "builder": "@angular-builders/custom-webpack:dev-server",
+          "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "sample:build:production"
+              "browserTarget": "styling:build:production"
             },
             "development": {
-              "browserTarget": "sample:build:development"
+              "browserTarget": "styling:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -220,20 +213,20 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "sample:build"
+            "browserTarget": "styling:build"
           }
         },
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/sample/src/**/*.ts", "apps/sample/src/**/*.html"]
+            "lintFilePatterns": ["apps/styling/src/**/*.ts", "apps/styling/src/**/*.html"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/sample"],
+          "outputs": ["coverage/apps/styling"],
           "options": {
-            "jestConfig": "apps/sample/jest.config.js",
+            "jestConfig": "apps/styling/jest.config.js",
             "passWithNoTests": true
           }
         }
