@@ -161,7 +161,11 @@
             "polyfills": "apps/styling/src/polyfills.ts",
             "tsConfig": "apps/styling/tsconfig.app.json",
             "inlineStyleLanguage": "less",
-            "assets": ["apps/styling/src/favicon.ico", "apps/styling/src/assets"],
+            "assets": [
+              "apps/styling/src/favicon.ico",
+              "apps/styling/src/assets",
+              { "glob": "**/*", "input": "./node_modules/@ant-design/icons-angular/src/inline-svg/", "output": "/assets/" }
+            ],
             "styles": ["apps/styling/src/styles.less"],
             "scripts": []
           },
@@ -264,5 +268,5 @@
       "style": "scss"
     }
   },
-  "defaultProject": "portal"
+  "defaultProject": "styling"
 }
