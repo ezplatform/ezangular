@@ -16,6 +16,10 @@
         "function": "microFrontend"
       },
       {
+        "source": "/fx/**",
+        "function": "fx"
+      },
+      {
         "source": "/ngsw-sample.json",
         "function": "ngsw"
       },

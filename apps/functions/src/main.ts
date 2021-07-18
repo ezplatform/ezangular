@@ -1,4 +1,4 @@
-import { microFrontend } from './app/micro-frontend';
+import { fx } from './app/fx';
 import { ngsw } from './app/ngsw';
 
-export { microFrontend, ngsw };
+export { ngsw, fx };
