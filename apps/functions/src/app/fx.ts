@@ -6,10 +6,19 @@ import * as functions from 'firebase-functions';
 import * as sha256 from 'sha256';
 
 import { CookieJar } from 'tough-cookie';
+import { JSDOM } from 'jsdom';
+import { json as jsonParser } from 'body-parser';
 
 interface AuthAccount {
   username: string;
   password: string;
+}
+
+interface MetaTraderAccount {
+  login: string;
+  password: string;
+  broker: string;
+  version: '4' | '5';
 }
 
 class Configs {
@@ -62,8 +71,37 @@ class MQL5 {
       })
       .then(resp => resp.data);
   }
-  public createSignal(): void {
-    // TODO
+
+  public async createSignal(account: MetaTraderAccount): Promise<string> {
+    const signature = await this.getSignalSignature();
+    const form = new URLSearchParams();
+    form.append('enabled', 'true');
+    form.append('private', 'true');
+    form.append('Name', 'S ' + account.login);
+    form.append('mtversion', account.version);
+    form.append('login', account.login);
+    form.append('password', account.password);
+    form.append('broker', account.broker);
+    form.append('tradeMode', '0');
+    form.append('isFree', 'false');
+    form.append('Price', '30');
+    form.append('agreedSignalsTermsProvider', 'true');
+    form.append('__signature', signature);
+    return this.http
+      .post('/en/signals/new', form, {
+        headers: {
+          ...Configs.DEFAULT_HEADERS,
+          referer: Configs.BASE_URL + '/en/signals/new',
+          'Content-Type': 'application/x-www-form-urlencoded'
+        }
+      })
+      .then(resp => {
+        const matches = resp.config.url.match(/en\/signals\/(\d+)/);
+        if (matches) {
+          return matches[1];
+        }
+        throw new Error('Error occurs when creating the account ' + account.login);
+      });
   }
 
   private crc32(input: string): number {
@@ -138,9 +176,21 @@ class MQL5 {
       }
     });
   }
+
+  private async getSignalSignature(): Promise<string> {
+    return this.http
+      .get('/en/signals/new', {
+        headers: Configs.DEFAULT_HEADERS
+      })
+      .then(resp => {
+        return (new JSDOM(resp.data).window.document.querySelector('input[name="__signature"]') as HTMLInputElement).value;
+      });
+  }
 }
 
 const app = express();
+
+app.use(jsonParser());
 app.get('/fx/', (req, res) => {
   res.send({ message: 'FX app is running!' });
 });
@@ -163,6 +213,17 @@ app.get('/fx/trading', async (req, res) => {
   res.set('Cache-Control', 'public, max-age=300, s-maxage=600');
   res.setHeader('Content-Type', 'application/json');
   res.send(json);
+});
+app.post('/fx/create', async (req, res) => {
+  const payload = req.body;
+  if (!payload.login || !payload.password || !payload.version || !payload.broker) {
+    return res.status(400).send({ message: 'Invalid payload!' });
+  }
+  const mql5 = new MQL5();
+  await mql5.ensureAuth();
+  const id = await mql5.createSignal(payload);
+
+  res.send({ id });
 });
 
 export const fx = functions.https.onRequest(app);
