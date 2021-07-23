@@ -29,15 +29,5 @@
       }
     ]
   },
-  "projects": {
-    "functions": {
-      "tags": []
-    },
-    "portal": {
-      "tags": []
-    },
-    "styling": {
-      "tags": []
-    }
-  }
+  "projects": {}
 }
