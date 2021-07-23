@@ -1,13 +1,12 @@
 import * as axios from 'axios';
 import * as axiosCookieJarSupport from 'axios-cookiejar-support';
+import { json as jsonParser } from 'body-parser';
 import * as csvToJson from 'csvtojson';
 import * as express from 'express';
 import * as functions from 'firebase-functions';
-import * as sha256 from 'sha256';
-
-import { CookieJar } from 'tough-cookie';
 import { JSDOM } from 'jsdom';
-import { json as jsonParser } from 'body-parser';
+import * as sha256 from 'sha256';
+import { CookieJar } from 'tough-cookie';
 
 interface AuthAccount {
   username: string;

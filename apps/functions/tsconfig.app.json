@@ -3,7 +3,7 @@
   "compilerOptions": {
     "outDir": "../../dist/out-tsc",
     "module": "commonjs",
-    "types": ["node", "tough-cookie"]
+    "types": ["node", "tough-cookie", "jsdom"]
   },
   "exclude": ["**/*.spec.ts"],
   "include": ["**/*.ts"]

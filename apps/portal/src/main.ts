@@ -1,12 +1,11 @@
-import * as layout from './single-spa/layout.html';
-
-import { constructApplications, constructLayoutEngine, constructRoutes } from 'single-spa-layout';
+import { enableProdMode } from '@angular/core';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { registerApplication, start } from 'single-spa';
+import { constructApplications, constructLayoutEngine, constructRoutes } from 'single-spa-layout';
 
 import { AppModule } from './app/app.module';
-import { enableProdMode } from '@angular/core';
 import { environment } from './environments/environment';
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import * as layout from './single-spa/layout.html';
 
 if (environment.production) {
   enableProdMode();

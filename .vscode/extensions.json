@@ -3,7 +3,6 @@
     // Formatters
     "esbenp.prettier-vscode",
     "HookyQR.beautify",
-    "mrmlnc.vscode-attrs-sorter",
     "dbaeumer.vscode-eslint",
     "emeraldwalk.runonsave",
     // Theme extensions
@@ -12,7 +11,6 @@
     // Intellisense extensions
     "christian-kohler.npm-intellisense",
     "christian-kohler.path-intellisense",
-    "mrmlnc.vscode-scss",
     // Recommended extensions
     "streetsidesoftware.code-spell-checker",
     "alefragnani.bookmarks",
