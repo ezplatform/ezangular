@@ -1,9 +1,11 @@
 {
   "version": 2,
   "projects": {
-    "functions": "apps\\functions",
-    "portal": "apps\\portal",
-    "styling": "apps\\styling"
+    "authentication": "apps/authentication",
+    "functions": "apps/functions",
+    "portal": "apps/portal",
+    "sidebar": "apps/sidebar",
+    "styling": "apps/styling"
   },
   "cli": {
     "analytics": false,

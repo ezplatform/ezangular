@@ -12,9 +12,13 @@
     <application name="@org/settings"></application>
   </route>
   -->
-  <main>
-    <route default>
-      <application name="@single-spa/welcome"></application>
-    </route>
-  </main>
+  <div class="ant-layout ant-layout-has-sider">
+    <application name="@ezfinhub/sidebar"
+                 class="ant-layout"></application>
+    <div class="ant-layout">
+      <route default>
+        <application name="@ezfinhub/authentication"></application>
+      </route>
+    </div>
+  </div>
 </single-spa-router>

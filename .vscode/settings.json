@@ -49,5 +49,6 @@
         "cmd": "node ./scripts/html-formatter.js --staged=true ${file}"
       }
     ]
-  }
+  },
+  "cSpell.words": ["ezfinhub"]
 }

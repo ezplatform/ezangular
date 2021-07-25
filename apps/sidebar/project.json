@@ -1,0 +1,95 @@
+{
+  "projectType": "application",
+  "root": "apps/sidebar",
+  "sourceRoot": "apps/sidebar/src",
+  "prefix": "ezfinhub",
+  "targets": {
+    "build": {
+      "executor": "@angular-builders/custom-webpack:browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/sidebar",
+        "index": "apps/sidebar/src/index.html",
+        "main": "apps/sidebar/src/main.single-spa.ts",
+        "polyfills": "apps/sidebar/src/polyfills.ts",
+        "tsConfig": "apps/sidebar/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": ["apps/sidebar/src/favicon.ico", "apps/sidebar/src/assets"],
+        "styles": ["apps/sidebar/src/styles.scss"],
+        "scripts": [],
+        "customWebpackConfig": {
+          "path": "apps/sidebar/webpack.config.js",
+          "libraryName": "sidebar",
+          "libraryTarget": "umd"
+        },
+        "deployUrl": "http://localhost:4202/"
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/sidebar/src/environments/environment.ts",
+              "with": "apps/sidebar/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "none"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true,
+          "outputHashing": "none"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-builders/custom-webpack:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "sidebar:build:production"
+        },
+        "development": {
+          "browserTarget": "sidebar:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "sidebar:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["apps/sidebar/src/**/*.ts", "apps/sidebar/src/**/*.html"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/sidebar"],
+      "options": {
+        "jestConfig": "apps/sidebar/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
