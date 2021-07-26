@@ -3,6 +3,7 @@
 // See https://webpack.js.org/guides/public-path/#root
 
 export function assetUrl(url: string): string {
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
   const publicPath = __webpack_public_path__;
   const publicPathSuffix = publicPath.endsWith('/') ? '' : '/';

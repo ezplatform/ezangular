@@ -13,11 +13,14 @@
   </route>
   -->
   <div class="ant-layout ant-layout-has-sider">
-    <application name="@ezfinhub/sidebar"
-                 class="ant-layout"></application>
+    <application class="ant-layout"
+                 name="@ezfinhub/sidebar"></application>
     <div class="ant-layout">
-      <route default>
-        <application name="@ezfinhub/authentication"></application>
+      <redirect from="/"
+                to="/auth"></redirect>
+      <route path="auth">
+        <application name="@ezfinhub/authentication"
+                     props="firebase"></application>
       </route>
     </div>
   </div>

@@ -22,7 +22,7 @@
           "libraryName": "sidebar",
           "libraryTarget": "umd"
         },
-        "deployUrl": "http://localhost:4202/"
+        "deployUrl": "http://localhost:4201/"
       },
       "configurations": {
         "production": {
