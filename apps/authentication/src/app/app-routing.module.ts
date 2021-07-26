@@ -3,6 +3,11 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: '/sign-up'
+  },
+  {
     path: 'forgot-password',
     loadChildren: async () => (await import('./features/forgot-password/forgot-password.module')).ForgotPasswordModule
   },
@@ -17,11 +22,6 @@ const routes: Routes = [
   {
     path: 'verify-email',
     loadChildren: async () => (await import('./features/verify-email/verify-email.module')).VerifyEmailModule
-  },
-  {
-    path: '',
-    pathMatch: 'full',
-    redirectTo: '/sign-up'
   }
 ];
 
