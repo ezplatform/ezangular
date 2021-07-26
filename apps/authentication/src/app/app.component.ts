@@ -1,10 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'ezfinhub-root',
+  selector: 'ezfinhub-authentication',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'authentication';
-}
+export class AppComponent {}

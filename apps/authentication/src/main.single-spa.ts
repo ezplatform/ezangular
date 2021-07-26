@@ -27,7 +27,7 @@ const lifecycles = singleSpaAngular<SingleSpaProps>({
       { provide: AngularFireAuth, useExisting: auth }
     ]).bootstrapModule(AppModule);
   },
-  template: '<ezfinhub-root />',
+  template: '<ezfinhub-authentication />',
   Router,
   NavigationStart,
   NgZone

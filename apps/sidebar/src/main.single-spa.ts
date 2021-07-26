@@ -15,7 +15,7 @@ const lifecycles = singleSpaAngular({
     singleSpaPropsSubject.next(singleSpaProps);
     return platformBrowserDynamic().bootstrapModule(AppModule);
   },
-  template: '<ezfinhub-root />',
+  template: '<ezfinhub-sidebar />',
   NgZone
 });
 
