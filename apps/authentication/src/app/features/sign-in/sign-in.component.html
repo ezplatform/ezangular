@@ -1,1 +1,57 @@
-<p>sign-in works!</p>
+<div class="sign-in">
+  <div class="sign-in__widget">
+    <div class="sign-in__header">
+      <div class="sign-in__title">Login</div>
+      <span class="sign-in__title-description">Please enter email & password</span>
+    </div>
+
+    <form nz-form>
+      <nz-form-item>
+        <nz-form-label [nzSpan]="24"
+                       nzRequired>Email: </nz-form-label>
+        <nz-form-control nzHasFeedback
+                         [nzSpan]="24"
+                         nzErrorTip="Input is required">
+          <input name="required"
+                 nz-input
+                 required>
+        </nz-form-control>
+      </nz-form-item>
+
+      <nz-form-item>
+        <nz-form-label [nzSpan]="24"
+                       nzRequired>Password: </nz-form-label>
+        <nz-form-control nzHasFeedback
+                         [nzSpan]="24"
+                         nzErrorTip="Input is required">
+          <input name="password"
+                 type="password"
+                 nz-input
+                 required>
+        </nz-form-control>
+      </nz-form-item>
+
+      <nz-form-item>
+        <nz-form-control [nzOffset]="0"
+                         [nzSpan]="12">
+          <button nz-button
+                  nzType="primary">Login</button>
+        </nz-form-control>
+      </nz-form-item>
+    </form>
+
+    <div class="sign-in__footer">
+      <span class="sign-in__description">If you don't have an account, please <a [routerLink]="'/sign-up'"> Sign up</a>
+      </span>
+
+      <div class="sign-in__login-with">
+        <span class="sign-in__description">Or login with:
+          <i class="branch-icon"
+             nz-icon
+             nzType="google"
+             nzTheme="outline"></i>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

@@ -12,16 +12,12 @@
     <application name="@org/settings"></application>
   </route>
   -->
-  <div class="ant-layout ant-layout-has-sider">
-    <application class="ant-layout"
-                 name="@ezfinhub/sidebar"></application>
-    <div class="ant-layout">
-      <redirect from="/"
-                to="/auth"></redirect>
-      <route path="auth">
-        <application name="@ezfinhub/authentication"
-                     props="firebase"></application>
-      </route>
-    </div>
+  <div class="ant-layout">
+    <redirect from="/"
+              to="/auth"></redirect>
+    <route path="auth">
+      <application name="@ezfinhub/authentication"
+                   props="firebase"></application>
+    </route>
   </div>
 </single-spa-router>
